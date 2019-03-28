@@ -3,31 +3,22 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var bodyParser = require('body-parser');
-
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-//Declares this as an Express App
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-//ejs not 'pug'
 app.set('view engine', 'ejs');
 
-//Adds middleware libraries using app.use()
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-//define a directory named 'public' at the same level as where you call node to serve static pages easier
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(bodyParser.urlencoded({extended:false}));
-
-//apply the routes to our application
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 

@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/mdui/0.4.2/css/mdui.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mdui/0.4.2/js/mdui.min.js"></script>
+    <meta charset="UTF-8">
+    <title>JUDGE</title>
+</head>
+<body>
+<!-- Simple header with scrollable tabs. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">JUDGE</span>
+            <div class="mdl-layout-spacer"></div>
+            <!--navigation bar-->
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href=""><i class="material-icons">account_circle</i> Judge Niko </a>
+                <a class="mdl-navigation__link" href=""><i class="material-icons">power_settings_new</i> Sign out </a>
+            </nav>
+        </div>
+        <!-- Tabs -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+            <a href="#scroll-tab-1" class="mdl-layout__tab is-active">The Hubble Telescope Nebula Challenge</a>
+            <a href="#scroll-tab-2" class="mdl-layout__tab">The Canyons of Mars</a>
+            <a href="#scroll-tab-3" class="mdl-layout__tab">Blast Off: the Straight-ish Line Speed Test</a>
+            <a href="#scroll-tab-4" class="mdl-layout__tab">Pi Noon: The Right Stuff</a>
+            <a href="#scroll-tab-5" class="mdl-layout__tab">Space Invaders</a>
+            <a href="#scroll-tab-6" class="mdl-layout__tab">Spirit of Curiosity</a>
+            <a href="#scroll-tab-7" class="mdl-layout__tab">The Apollo 13 Obstacle Course</a>
+        </div>
+    </header>
+    <!--drawer-->
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout__title">JUDGE</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="judge1.html">Score</a>
+            <a class="mdl-navigation__link" href="judge1.html">Schedule</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+            <div class="page-content">
+                <!-- Your content goes here -->
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                        <div class="mdl-card__title">
+                            <h1 class="mdl-card__title-text">Team Selection</h1>
+                        </div>
+                        <div class="mdl-card__supporting-text scrollable">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <select class="mdl-textfield__input" id="tag1-team" name="tag1-team">
+                                    <option></option>
+                                    <option value="team1">Team 1</option>
+                                    <option value="team2">Team 2</option>
+                                    <option value="team3">Team 3</option>
+                                    <option value="team4">Team 4</option>
+                                </select>
+                                <label class="mdl-textfield__label" for="tag1-team">Team</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                        <div class="mdl-card__title">
+                            <h1 class="mdl-card__title-text">Method of competition</h1>
+                        </div>
+                        <div class="mdl-card__supporting-text scrollable">
+                            <table style="width: 100%">
+                                <tr>
+                                    <td>
+                                        <div class="mdl-cell mdl-cell--12-col">
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag1-method1-option1">
+                                                <input type="radio" id="tag1-method1-option1" class="mdl-radio__button" name="tag1-method1-option" value="Method1" checked>
+                                                <span class="mdl-radio__label">Method 1</span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="mdl-cell mdl-cell--12-col">
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag1-method1-option2">
+                                                <input type="radio" id="tag1-method1-option2" class="mdl-radio__button" name="tag1-method1-option" value="Method2" disabled>
+                                                <span class="mdl-radio__label">Method 2</span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                        <div class="mdl-card__title">
+                            <h1 class="mdl-card__title-text">Runtime</h1>
+                        </div>
+                        <div class="mdl-card__supporting-text scrollable" >
+                            <table>
+                                <tr>
+                                    <td>
+                                        <form action="#">
+                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:40px">
+                                                <input class="mdl-textfield__input" type="number" style="text-align: right" pattern="-?[0-9]*(\.[0-9]+)?" id="min">
+                                                <label class="mdl-textfield__label" style="text-align: right" for="min">MIN</label>
+                                                <span class="mdl-textfield__error">Input is not a number!</span>
+                                            </div>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        :
+                                    </td>
+                                    <td>
+                                        <form action="#">
+                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 40px">
+                                                <label for="sec"></label><input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="sec">
+                                                <label class="mdl-textfield__label" for="min">SEC</label>
+                                                <span class="mdl-textfield__error">Input is not a number!</span>
+                                            </div>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col"   >
+                        <div class="mdl-card__title">
+                            <h1 class="mdl-card__title-text">Additional Points</h1>
+                        </div>
+                        <div class="mdl-card__supporting-text scrollable ">
+                            <div class="mdl-card__actions mdl-card--border ">
+                                <h4>Method 1</h4>
+                                <table style="width: 100%">
+                                    <tr>
+                                        <td colspan="4">Number of colour zone entered in the correct order :</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag1-additional1-option0">
+                                                <input type="radio" id="tag1-additional1-option0" class="mdl-radio__button" name="tag1-additional1-option" value="0" >
+                                                <span class="mdl-radio__label">0</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag1-additional1-option1">
+                                                <input type="radio" id="tag1-additional1-option1" class="mdl-radio__button" name="tag1-additional1-option" value="1" >
+                                                <span class="mdl-radio__label">1</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag1-additional1-option2">
+                                                <input type="radio" id="tag1-additional1-option2" class="mdl-radio__button" name="tag1-additional1-option" value="2" >
+                                                <span class="mdl-radio__label">2</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag1-additional1-option3">
+                                                <input type="radio" id="tag1-additional1-option3" class="mdl-radio__button" name="tag1-additional1-option" value="3" >
+                                                <span class="mdl-radio__label">3</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag1-additional1-option4">
+                                                <input type="radio" id="tag1-additional1-option4" class="mdl-radio__button" name="tag1-additional1-option" value="4" >
+                                                <span class="mdl-radio__label">4</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border ">
+                                <h4>Method 2</h4>
+                                <table style="width: 100%">
+                                    <tr>
+                                        <td colspan="4">Number of areas the robot has entered :</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag1-additional2-option0">
+                                                <input type="radio" id="tag1-additional2-option0" class="mdl-radio__button" name="tag1-additional2-option" value="0" disabled>
+                                                <span class="mdl-radio__label">0</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag1-additional2-option1">
+                                                <input type="radio" id="tag1-additional2-option1" class="mdl-radio__button" name="tag1-additional2-option" value="1" disabled>
+                                                <span class="mdl-radio__label">1</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag1-additional2-option2">
+                                                <input type="radio" id="tag1-additional2-option2" class="mdl-radio__button" name="tag1-additional2-option" value="2" disabled>
+                                                <span class="mdl-radio__label">2</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag1-additional2-option3">
+                                                <input type="radio" id="tag1-additional2-option3" class="mdl-radio__button" name="tag1-additional2-option" value="3" disabled>
+                                                <span class="mdl-radio__label">3</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag1-additional2-option4">
+                                                <input type="radio" id="tag1-additional2-option4" class="mdl-radio__button" name="tag1-additional2-option" value="4" disabled>
+                                                <span class="mdl-radio__label">4</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col"   >
+                        <div class="mdl-card__title">
+                            <h1 class="mdl-card__title-text">Method Completion</h1>
+                        </div>
+                        <div class="mdl-card__supporting-text scrollable ">
+                            <div class="mdui-panel" mdui-panel>
+
+                                <div class="mdui-panel-item">
+                                    <div class="mdui-panel-item-header">General</div>
+                                    <div class="mdui-panel-item-body">
+                                        * If any part of a robot enters a zone, it is deemed to have visited the zone. The part of the robot entering the zone does not have to be on the ground – the zone essentially extends virtually up to the ceiling.<br><br>
+                                        * Three run attempts are permitted, and encouraged, during your 7-minute window.<br><br>
+                                        * It is not necessary to complete all three runs.<br><br>
+                                        * The robot must stop autonomously after visiting the final zone.<br><br>
+                                        * If a zone is entered out-of-sequence, it is just ignored – there is no penalty for entering zones out of sequence. However, if a zone is entered out of sequence, it is not deemed to have officially ‘visited’ the zone for the purposes of that run.<br><br>
+                                        For example: you enter Red, you enter Blue but then you enter Green. Green does not count because you have not entered Yellow yet.<br><br>
+                                        Subsequently, you enter Yellow and enter Blue again, which is permissible but you do need to enter Green again because you entered it out of sequence.<br><br>
+                                        * At the end of each run, the robot will be placed back in the centre of the course.<br><br>
+                                        * The robot’s autonomous runs can be triggered by pressing a button on the robot, for example, or by remote control activation.<br><br>
+                                        * It is allowed for the players to have button(s) on their remote controller that they can press to tell their robot that it has, indeed, visited the zones. This is permitted for both methods described above.<br><br>
+                                        * Apart from your “activation” and “visited” controls, no other remote control is permitted.<br><br>
+                                        * Up to three rescues per run are permitted, with penalties as detailed below.<br><br>
+                                    </div>
+                                </div>
+
+                                <div class="mdui-panel-item">
+                                    <div class="mdui-panel-item-header">Method 1</div>
+                                    <div class="mdui-panel-item-body">
+                                        • The robot must autonomously identify each coloured marker and visit each zone in the following order: Red, Blue, Yellow and, finally, Green.<br><br>
+                                        • The placement of the markers will be randomly pre-determined but will not be advised to competitors ahead of their runs. The placement of the markers will not be changed between your three runs and it is permissible to have your robot ‘learn’ the route and achieve faster times on subsequent runs.<br><br>
+                                        • We will provide details of the paint and materials used to create the markers so that you can re-create the course if you wish.<br><br>
+                                    </div>
+                                </div>
+                                <div class="mdui-panel-item">
+                                    <div class="mdui-panel-item-header">Method 2</div>
+                                    <div class="mdui-panel-item-body">
+                                        • Your robot must autonomously visit each zone in any order.<br><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                        <div class="mdl-card__title">
+                            <h1 class="mdl-card__title-text">Penalties</h1>
+                        </div>
+                        <div class="mdl-card__supporting-text scrollable">
+                            <table style="width: 100%">
+                                <tr>
+                                    <td colspan="4">Number of rescues :</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag1-Penalties1-option1">
+                                            <input type="radio" id="tag1-Penalties1-option1" class="mdl-radio__button" name="tag1-Penalties1-option" value="2" >
+                                            <span class="mdl-radio__label">0</span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag1-Penalties1-option2">
+                                            <input type="radio" id="tag1-Penalties1-option2" class="mdl-radio__button" name="tag1-Penalties1-option" value="2" >
+                                            <span class="mdl-radio__label">1</span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag1-Penalties1-option3">
+                                            <input type="radio" id="tag1-Penalties1-option3" class="mdl-radio__button" name="tag1-Penalties1-option" value="2" >
+                                            <span class="mdl-radio__label">2</span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag1-Penalties1-option4">
+                                            <input type="radio" id="tag1-Penalties1-option4" class="mdl-radio__button" name="tag1-Penalties1-option" value="2" >
+                                            <span class="mdl-radio__label">3</span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag1-Penalties1-option5">
+                                            <input type="radio" id="tag1-Penalties1-option5" class="mdl-radio__button" name="tag1-Penalties1-option" value="2" >
+                                            <span class="mdl-radio__label">4 or more</span>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                        <div class="mdl-card__title">
+                            <h1 class="mdl-card__title-text">Current Attempt</h1>
+                        </div>
+                        <div class="mdl-card__supporting-text scrollable">
+                            <h4>2nd time</h4>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-cell mdl-cell&#45;&#45;12-col send-button" align="center">
+                        <!-- Accent-colored raised button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="width: 140px; min-width: initial">
+                            next attempt
+                        </button><!-- Accent-colored raised button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="width: 140px; min-width: initial">
+                            submit
+                        </button>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+            </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+            <div class="page-content">
+                <!-- Your content goes here -->
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                        <div class="mdl-card__title">
+                            <h1 class="mdl-card__title-text">Team Selection</h1>
+                        </div>
+                        <div class="mdl-card__supporting-text scrollable">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <select class="mdl-textfield__input" id="tag2Team" name="Team">
+                                    <option></option>
+                                    <option value="team1">Team 1</option>
+                                    <option value="team2">Team 2</option>
+                                    <option value="team3">Team 3</option>
+                                    <option value="team4">Team 4</option>
+                                </select>
+                                <label class="mdl-textfield__label" for="tag2Team">Team</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                        <div class="mdl-card__title">
+                            <h1 class="mdl-card__title-text">Runtime</h1>
+                        </div>
+                        <div class="mdl-card__supporting-text scrollable" >
+                            <table>
+                                <tr>
+                                    <td>
+                                        <form action="#">
+                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:40px">
+                                                <input class="mdl-textfield__input" type="number" style="text-align: right" pattern="-?[0-9]*(\.[0-9]+)?" id="tag2min">
+                                                <label class="mdl-textfield__label" style="text-align: right" for="tag2min">MIN</label>
+                                                <span class="mdl-textfield__error">Input is not a number!</span>
+                                            </div>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        :
+                                    </td>
+                                    <td>
+                                        <form action="#">
+                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 40px">
+                                                <label for="sec"></label><input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="tag2sec">
+                                                <label class="mdl-textfield__label" for="tag2min">SEC</label>
+                                                <span class="mdl-textfield__error">Input is not a number!</span>
+                                            </div>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col"   >
+                        <div class="mdl-card__title">
+                            <h1 class="mdl-card__title-text">Additional Points</h1>
+                        </div>
+                        <div class="mdl-card__supporting-text scrollable ">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"  style="height: 100%" for="additional-points-1">
+                                            <input type="checkbox" id="tag2-additional-points-1" class="mdl-checkbox__input">
+                                            <span class="mdl-checkbox__label">Completed run.</span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" style="height: 100%" for="additional-points-2">
+                                            <input type="checkbox" id="tag2-additional-points-2" class="mdl-checkbox__input">
+                                            <span class="mdl-checkbox__label">Completed run without touching the walls.</span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" style="height: 100%" for="additional-points-3">
+                                            <input type="checkbox" id="additional-points-3" class="mdl-checkbox__input">
+                                            <span class="mdl-checkbox__label">The number of zones entered.</span>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                        <div class="mdl-card__title">
+                            <h1 class="mdl-card__title-text">Penalties</h1>
+                        </div>
+                        <div class="mdl-card__supporting-text scrollable">
+                            <table style="width: 100%">
+                                <tr>
+                                    <td colspan="4">Number of rescues :</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag2-Penalties1-option1">
+                                            <input type="radio" id="tag2-Penalties1-option1" class="mdl-radio__button" name="tag2-Penalties1-option" value="2" >
+                                            <span class="mdl-radio__label">0</span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag2-Penalties1-option2">
+                                            <input type="radio" id="tag2-Penalties1-option2" class="mdl-radio__button" name="tag2-Penalties1-option" value="2" >
+                                            <span class="mdl-radio__label">1</span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag2-Penalties1-option3">
+                                            <input type="radio" id="tag2-Penalties1-option3" class="mdl-radio__button" name="tag2-Penalties1-option" value="2" >
+                                            <span class="mdl-radio__label">2</span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag2-Penalties1-option4">
+                                            <input type="radio" id="tag2-Penalties1-option4" class="mdl-radio__button" name="tag2-Penalties1-option" value="2" >
+                                            <span class="mdl-radio__label">3</span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag2-Penalties1-option5">
+                                            <input type="radio" id="tag2-Penalties1-option5" class="mdl-radio__button" name="tag2-Penalties1-option" value="2" >
+                                            <span class="mdl-radio__label">4 or more</span>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                        <div class="mdl-card__title">
+                            <h1 class="mdl-card__title-text">Current Attempt</h1>
+                        </div>
+                        <div class="mdl-card__supporting-text scrollable">
+                            <h4>2nd time</h4>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-cell mdl-cell&#45;&#45;12-col send-button" align="center">
+                        <!-- Accent-colored raised button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="width: 140px; min-width: initial">
+                            next attempt
+                        </button><!-- Accent-colored raised button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="width: 140px; min-width: initial">
+                            submit
+                        </button>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+            </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+            <div class="page-content">
+                <!-- Your content goes here -->
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                        <div class="mdl-card__title">
+                            <h1 class="mdl-card__title-text">Team Selection</h1>
+                        </div>
+                        <div class="mdl-card__supporting-text scrollable">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <select class="mdl-textfield__input" id="tag3Team" name="Team">
+                                    <option></option>
+                                    <option value="team1">Team 1</option>
+                                    <option value="team2">Team 2</option>
+                                    <option value="team3">Team 3</option>
+                                    <option value="team4">Team 4</option>
+                                </select>
+                                <label class="mdl-textfield__label" for="tag3Team">Team</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                        <div class="mdl-card__title">
+                            <h1 class="mdl-card__title-text">Runtime</h1>
+                        </div>
+                        <div class="mdl-card__supporting-text scrollable" >
+                            <table>
+                                <tr>
+                                    <td>
+                                        <form action="#">
+                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:40px">
+                                                <input class="mdl-textfield__input" type="number" style="text-align: right" pattern="-?[0-9]*(\.[0-9]+)?" id="tag3min">
+                                                <label class="mdl-textfield__label" style="text-align: right" for="tag3min">MIN</label>
+                                                <span class="mdl-textfield__error">Input is not a number!</span>
+                                            </div>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        :
+                                    </td>
+                                    <td>
+                                        <form action="#">
+                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 40px">
+                                                <label for="sec"></label><input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="tag3sec">
+                                                <label class="mdl-textfield__label" for="tag3min">SEC</label>
+                                                <span class="mdl-textfield__error">Input is not a number!</span>
+                                            </div>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col"   >
+                        <div class="mdl-card__title">
+                            <h1 class="mdl-card__title-text">Additional Points</h1>
+                        </div>
+                        <div class="mdl-card__supporting-text scrollable ">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"  style="height: 100%" for="tag3-additional-points-1">
+                                            <input type="checkbox" id="tag3-additional-points-1" class="mdl-checkbox__input">
+                                            <span class="mdl-checkbox__label">Complete the current run.</span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" style="height: 100%" for="tag3-additional-points-2">
+                                            <input type="checkbox" id="tag3-additional-points-2" class="mdl-checkbox__input">
+                                            <span class="mdl-checkbox__label">Didn't touch the slides of the course. </span>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col"   >
+                        <div class="mdl-card__title">
+                            <h1 class="mdl-card__title-text">Penalties</h1>
+                        </div>
+                        <div class="mdl-card__supporting-text scrollable ">
+                            <table style="width: 100%">
+                                <tr>
+                                    <td colspan="4">The number of times the robot touches the wall:</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag3-Penalties1-option1">
+                                            <input type="radio" id="tag3-Penalties1-option1" class="mdl-radio__button" name="tag3-Penalties1-option" value="2" >
+                                            <span class="mdl-radio__label">0</span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag3-Penalties1-option2">
+                                            <input type="radio" id="tag3-Penalties1-option2" class="mdl-radio__button" name="tag3-Penalties1-option" value="2" >
+                                            <span class="mdl-radio__label">1</span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag3-Penalties1-option3">
+                                            <input type="radio" id="tag3-Penalties1-option3" class="mdl-radio__button" name="tag3-Penalties1-option" value="2" >
+                                            <span class="mdl-radio__label">2</span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag3-Penalties1-option4">
+                                            <input type="radio" id="tag3-Penalties1-option4" class="mdl-radio__button" name="tag3-Penalties1-option" value="2" >
+                                            <span class="mdl-radio__label">3 or more</span>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                            <hr>
+                            <table style="width: 100%">
+                                <tr>
+                                    <td colspan="4">Number of rescues :</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag3-Penalties2-option1">
+                                            <input type="radio" id="tag3-Penalties2-option1" class="mdl-radio__button" name="tag3-Penalties2-option" value="2" >
+                                            <span class="mdl-radio__label">0</span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag3-Penalties2-option2">
+                                            <input type="radio" id="tag3-Penalties2-option2" class="mdl-radio__button" name="tag3-Penalties2-option" value="2" >
+                                            <span class="mdl-radio__label">1</span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag3-Penalties2-option3">
+                                            <input type="radio" id="tag3-Penalties2-option3" class="mdl-radio__button" name="tag3-Penalties2-option" value="2" >
+                                            <span class="mdl-radio__label">2</span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag3-Penalties2-option4">
+                                            <input type="radio" id="tag3-Penalties2-option4" class="mdl-radio__button" name="tag3-Penalties2-option" value="2" >
+                                            <span class="mdl-radio__label">3 or more</span>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                            <hr>
+                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="tag3-Penalties3">
+                                <input type="checkbox" id="tag3-Penalties3" class="mdl-checkbox__input">
+                                <span class="mdl-checkbox__label">Abandoned or non-completed run</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                        <div class="mdl-card__title">
+                            <h1 class="mdl-card__title-text">Current Attempt</h1>
+                        </div>
+                        <div class="mdl-card__supporting-text scrollable">
+                            <h4>2nd time</h4>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+
+                <div class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                    <div class="mdl-cell mdl-cell&#45;&#45;12-col send-button" align="center">
+                        <!-- Accent-colored raised button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="width: 140px; min-width: initial">
+                            next attempt
+                        </button><!-- Accent-colored raised button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="width: 140px; min-width: initial">
+                            submit
+                        </button>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+            </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-4">
+            <div class="page-content">
+                <!-- Your content goes here -->
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                            <div class="mdl-card__title">
+                                <h1 class="mdl-card__title-text">Team Selection</h1>
+                            </div>
+                            <div class="mdl-card__supporting-text scrollable">
+                                <table style="width: 100%;">
+                                    <tr>
+                                        <td>
+                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 80px">
+                                                <select class="mdl-textfield__input" id="tag4-team1" name="tag4-team">
+                                                    <option></option>
+                                                    <option value="team1">Team 1</option>
+                                                    <option value="team2">Team 2</option>
+                                                    <option value="team3">Team 3</option>
+                                                    <option value="team4">Team 4</option>
+                                                </select>
+                                                <label class="mdl-textfield__label" for="tag4-team1">Team 1</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 80px">
+                                                <select class="mdl-textfield__input" id="tag4-team2" name="tag4-team">
+                                                    <option></option>
+                                                    <option value="team1">Team 1</option>
+                                                    <option value="team2">Team 2</option>
+                                                    <option value="team3">Team 3</option>
+                                                    <option value="team4">Team 4</option>
+                                                </select>
+                                                <label class="mdl-textfield__label" for="tag4-team2">Team 2</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                            <div class="mdl-card__title">
+                                <h1 class="mdl-card__title-text">Runtime</h1>
+                            </div>
+                            <div class="mdl-card__supporting-text scrollable" >
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <form action="#">
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:40px">
+                                                    <input class="mdl-textfield__input" type="number" style="text-align: right" pattern="-?[0-9]*(\.[0-9]+)?" id="tag4-min">
+                                                    <label class="mdl-textfield__label" style="text-align: right" for="tag4-min">MIN</label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                            </form>
+                                        </td>
+                                        <td>
+                                            :
+                                        </td>
+                                        <td>
+                                            <form action="#">
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 40px">
+                                                    <label for="sec"></label><input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="tag4-sec">
+                                                    <label class="mdl-textfield__label" for="tag4-sec">SEC</label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col"   >
+                            <div class="mdl-card__title">
+                                <h1 class="mdl-card__title-text">Points</h1>
+                            </div>
+                            <div class="mdl-card__supporting-text scrollable ">
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="tag4-points">
+                                    <input type="checkbox" id="tag4-points" class="mdl-checkbox__input">
+                                    <span class="mdl-checkbox__label">Bye</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-cell mdl-cell&#45;&#45;12-col send-button" align="center">
+                            <!-- Accent-colored raised button with ripple -->
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="width: 140px; min-width: initial">
+                                submit
+                            </button>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-5">
+            <div class="page-content">
+                <!-- Your content goes here -->
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                            <div class="mdl-card__title">
+                                <h1 class="mdl-card__title-text">Team Selection</h1>
+                            </div>
+                            <div class="mdl-card__supporting-text scrollable">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <select class="mdl-textfield__input" id="tag5-Team" name="Team">
+                                        <option></option>
+                                        <option value="team1">Team 1</option>
+                                        <option value="team2">Team 2</option>
+                                        <option value="team3">Team 3</option>
+                                        <option value="team4">Team 4</option>
+                                    </select>
+                                    <label class="mdl-textfield__label" for="Team">Team</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                            <div class="mdl-card__title">
+                                <h1 class="mdl-card__title-text">Method Of Challenge</h1>
+                            </div>
+                            <div class="mdl-card__supporting-text scrollable">
+                                <table style="width: 100%">
+                                    <tr>
+                                        <td>
+                                            <div class="mdl-cell mdl-cell--12-col">
+                                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag5-method-option-1">
+                                                    <input type="radio" id="tag5-method-option-1" class="mdl-radio__button" name="Method" value="tag5-method-option1" checked>
+                                                    <span class="mdl-radio__label">Balls</span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="mdl-cell mdl-cell--12-col">
+                                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag5-method-option-2">
+                                                    <input type="radio" id="tag5-method-option-2" class="mdl-radio__button" name="Method" value="tag5-method-option2" disabled>
+                                                    <span class="mdl-radio__label">Darts</span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                            <div class="mdl-card__title">
+                                <h1 class="mdl-card__title-text">Total Time</h1>
+                            </div>
+                            <div class="mdl-card__supporting-text scrollable" >
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <form action="#">
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:40px">
+                                                    <input class="mdl-textfield__input" type="number" style="text-align: right" pattern="-?[0-9]*(\.[0-9]+)?" id="tag5-min">
+                                                    <label class="mdl-textfield__label" style="text-align: right" for="tag5-min">MIN</label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                            </form>
+                                        </td>
+                                        <td>
+                                            :
+                                        </td>
+                                        <td>
+                                            <form action="#">
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 40px">
+                                                    <label for="sec"></label><input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="tag5-sec">
+                                                    <label class="mdl-textfield__label" for="tag5-sec">SEC</label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col"   >
+                            <div class="mdl-card__title">
+                                <h1 class="mdl-card__title-text">Points</h1>
+                            </div>
+                            <div class="mdl-card__supporting-text scrollable ">
+                                <table style="width: 100%">
+                                    <tr>
+                                        <td colspan="5">Number of knocked down targets :</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag5-point1-0">
+                                                <input type="radio" id="tag5-point1-0" class="mdl-radio__button" name="tag5-point1" value="2" >
+                                                <span class="mdl-radio__label">0</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag5-point1-1">
+                                                <input type="radio" id="tag5-point1-1" class="mdl-radio__button" name="tag5-point1" value="2" >
+                                                <span class="mdl-radio__label">1</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag5-point1-2">
+                                                <input type="radio" id="tag5-point1-2" class="mdl-radio__button" name="tag5-point1" value="2" >
+                                                <span class="mdl-radio__label">2</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag5-point1-3">
+                                                <input type="radio" id="tag5-point1-3" class="mdl-radio__button" name="tag5-point1" value="2" >
+                                                <span class="mdl-radio__label">3</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag5-point1-4">
+                                                <input type="radio" id="tag5-point1-4" class="mdl-radio__button" name="tag5-point1" value="2" >
+                                                <span class="mdl-radio__label">4</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tag5-point1-5">
+                                                <input type="radio" id="tag5-point1-5" class="mdl-radio__button" name="tag5-point1" value="2" >
+                                                <span class="mdl-radio__label">5</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                            <div class="mdl-card__title">
+                                <h1 class="mdl-card__title-text">Penalties</h1>
+                            </div>
+                            <div class="mdl-card__supporting-text scrollable">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="tag5-penalties1">
+                                                <input type="checkbox" id="tag5-penalties1" class="mdl-checkbox__input">
+                                                <span class="mdl-checkbox__label">Any wheel of the robot passed the stop line</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                            <div class="mdl-card__title">
+                                <h1 class="mdl-card__title-text">Current Attempt</h1>
+                            </div>
+                            <div class="mdl-card__supporting-text scrollable">
+                                <h4>2nd time</h4>
+                            </div>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-cell mdl-cell&#45;&#45;12-col send-button" align="center">
+                            <!-- Accent-colored raised button with ripple -->
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="width: 140px; min-width: initial">
+                                next attempt
+                            </button><!-- Accent-colored raised button with ripple -->
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="width: 140px; min-width: initial">
+                                submit
+                            </button>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-6">
+            <div class="page-content">
+                <!-- Your content goes here -->
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                            <div class="mdl-card__title">
+                                <h1 class="mdl-card__title-text">Team Selection</h1>
+                            </div>
+                            <div class="mdl-card__supporting-text scrollable">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <select class="mdl-textfield__input" id="tag6-team" name="Team">
+                                        <option></option>
+                                        <option value="team1">Team 1</option>
+                                        <option value="team2">Team 2</option>
+                                        <option value="team3">Team 3</option>
+                                        <option value="team4">Team 4</option>
+                                    </select>
+                                    <label class="mdl-textfield__label" for="tag6-team">Team</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                            <div class="mdl-card__title">
+                                <h1 class="mdl-card__title-text">Runtime</h1>
+                            </div>
+                            <div class="mdl-card__supporting-text scrollable" >
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <form action="#">
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:40px">
+                                                    <input class="mdl-textfield__input" type="number" style="text-align: right" pattern="-?[0-9]*(\.[0-9]+)?" id="tag1-runtime-min">
+                                                    <label class="mdl-textfield__label" style="text-align: right" for="tag1-runtime-min">MIN</label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                            </form>
+                                        </td>
+                                        <td>
+                                            :
+                                        </td>
+                                        <td>
+                                            <form action="#">
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 40px">
+                                                    <label for="sec"></label><input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="tag1-runtime-sec">
+                                                    <label class="mdl-textfield__label" for="tag1-runtime-sec">SEC</label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col"   >
+                            <div class="mdl-card__title">
+                                <h1 class="mdl-card__title-text">Points</h1>
+                            </div>
+                            <div class="mdl-card__supporting-text scrollable ">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            Number of samples collected :
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <!-- Numeric Textfield with Floating Label -->
+                                            <form action="#">
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 60px">
+                                                    <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="tag6-number">
+                                                    <label class="mdl-textfield__label" for="tag6-number">Number</label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                            <div class="mdl-card__title">
+                                <h1 class="mdl-card__title-text">Current Attempt</h1>
+                            </div>
+                            <div class="mdl-card__supporting-text scrollable">
+                                <h4>2nd time</h4>
+                            </div>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-cell mdl-cell&#45;&#45;12-col send-button" align="center">
+                            <!-- Accent-colored raised button with ripple -->
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="width: 140px; min-width: initial">
+                                next attempt
+                            </button><!-- Accent-colored raised button with ripple -->
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="width: 140px; min-width: initial">
+                                submit
+                            </button>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-7">
+            <div class="page-content">
+                <!-- Your content goes here -->
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                            <div class="mdl-card__title">
+                                <h1 class="mdl-card__title-text">Team Selection</h1>
+                            </div>
+                            <div class="mdl-card__supporting-text scrollable">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <select class="mdl-textfield__input" id="tag7-team" name="tag7-team">
+                                        <option></option>
+                                        <option value="team1">Team 1</option>
+                                        <option value="team2">Team 2</option>
+                                        <option value="team3">Team 3</option>
+                                        <option value="team4">Team 4</option>
+                                    </select>
+                                    <label class="mdl-textfield__label" for="tag7-team">Team</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                            <div class="mdl-card__title">
+                                <h1 class="mdl-card__title-text">Runtime</h1>
+                            </div>
+                            <div class="mdl-card__supporting-text scrollable" >
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <form action="#">
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:40px">
+                                                    <input class="mdl-textfield__input" type="number" style="text-align: right" pattern="-?[0-9]*(\.[0-9]+)?" id="tag7-runtime-min">
+                                                    <label class="mdl-textfield__label" style="text-align: right" for="tag7-runtime-min">MIN</label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                            </form>
+                                        </td>
+                                        <td>
+                                            :
+                                        </td>
+                                        <td>
+                                            <form action="#">
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 40px">
+                                                    <label for="sec"></label><input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="tag7-runtime-sec">
+                                                    <label class="mdl-textfield__label" for="tag7-runtime-sec">SEC</label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col"   >
+                            <div class="mdl-card__title">
+                                <h1 class="mdl-card__title-text">Additional Points</h1>
+                            </div>
+                            <div class="mdl-card__supporting-text scrollable ">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            Number of completed obstacles :
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <!-- Numeric Textfield with Floating Label -->
+                                            <form action="#">
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 60px">
+                                                    <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="tag7-additional-number1">
+                                                    <label class="mdl-textfield__label" for="tag7-additional-number1">Number</label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col"   >
+                            <div class="mdl-card__title">
+                                <h1 class="mdl-card__title-text">Penalties</h1>
+                            </div>
+                            <div class="mdl-card__supporting-text scrollable ">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            Number of skipped obstacles :
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <!-- Numeric Textfield with Floating Label -->
+                                            <form action="#">
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 60px">
+                                                    <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="tag7-penalties">
+                                                    <label class="mdl-textfield__label" for="tag7-penalties">Number</label>
+                                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                                </div>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                            <div class="mdl-card__title">
+                                <h1 class="mdl-card__title-text">Current Attempt</h1>
+                            </div>
+                            <div class="mdl-card__supporting-text scrollable">
+                                <h4>2nd time</h4>
+                            </div>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-cell mdl-cell&#45;&#45;12-col send-button" align="center">
+                            <!-- Accent-colored raised button with ripple -->
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="width: 140px; min-width: initial">
+                                next attempt
+                            </button><!-- Accent-colored raised button with ripple -->
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="width: 140px; min-width: initial">
+                                submit
+                            </button>
+                        </div>
+                        <div class="mdl-layout-spacer"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer__left-section">
+                <div class="mdl-logo">Judge</div>
+                <ul class="mdl-mini-footer__link-list">
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Privacy & Terms</a></li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+</div>
+</body>
+</html>

@@ -1,8 +1,8 @@
 var MongoClient=require('mongodb').MongoClient;
 var ObjectId=require('mongodb').ObjectID;
-var DBurl='mongodb://localhost:27017/mongodb';
+var DBurl='mongodb://localhost:27017/Piwar';
 var ejs=require('ejs');
-
+var database='Piwar';
 
 // Connect to the database
 // form= which form need to be changed
@@ -11,39 +11,31 @@ var ejs=require('ejs');
 
 var handledata={
     // search
-    search:function (req,res) {
-        MongoClient.connect(DBurl,function (err,db,form,condition) {
+    search:function (form,condition,callback) {
+        MongoClient.connect(DBurl,function (err,db) {
             if(err){
                 console.log(err);
                 console.log("can't connect to the database!");
                 return;
             }
-            var list=[];
-            var result=db.collection(form).find(condition);
-            result.each(function (err,doc) {
-                if(err)
-                    console.log(err);
-                else{
-                    if(doc!=null)
-                        list.push(doc);
-                    else{
-                        ejs.renderFile('routes/index.ejs',{list:list},function (err,data) {
-                            res.send(data);
-                        })
-                    }
-                }
-            })
-        })
+            var dbo=db.db(database);
+            dbo.collection(form).find(condition).toArray(function(err,result){
+                if(err) throw err;
+                callback(null,result);
+            });
+            db.close();
+        });
     },
     // insert
-    insert:function(req,res){
-        MongoClient.connect(DBurl,function (err,db,form,data) {
+    insert:function(form,data){
+        MongoClient.connect(DBurl,function (err,db) {
             if(err){
                 console.log(err);
                 console.log("can't connect to the database!");
                 return;
             }
-            db.collection(form).insertOne(data,function (err,result) {
+            var dbo=db.db(database);
+            dbo.collection(form).insertOne(data,function (err,result) {
                 if(err)
                     console.log("Inserting failed!")
                 else
@@ -53,14 +45,15 @@ var handledata={
         })
     },
     // update
-    update:function (req,res) {
-        MongoClient.connect(DBurl,function (err,db,form,condition,data) {
+    update:function (form,condition,data) {
+        MongoClient.connect(DBurl,function (err,db) {
             if(err){
                 console.log(err);
                 console.log("can't connect to the database!");
                 return;
             }
-            db.collection(form).updateOne(condition,{$set:data},function (err,result) {
+            var dbo=db.db(database);
+            dbo.collection(form).updateOne(condition,{$set:data},function (err,result) {
                 if(err)
                     console.log("Updating failed!")
                 else
@@ -70,14 +63,15 @@ var handledata={
         })
     },
     // delete
-    delete:function (req,res) {
+    delete:function (form,condition) {
         MongoClient.connect(DBurl,function (err,db,form,data) {
             if(err){
                 console.log(err);
                 console.log("can't connect to the database!");
                 return;
             }
-            db.collection(form).deleteOne(data,function (err,result) {
+            var dbo=db.db(database);
+            dbo.collection(form).deleteOne(condition,function (err,result) {
                 if(err)
                     console.log("Deleting failed!")
                 else

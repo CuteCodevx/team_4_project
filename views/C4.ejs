@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/mdui/0.4.2/css/mdui.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mdui/0.4.2/js/mdui.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/javascript/getFormData.js"></script>
+    <meta charset="UTF-8">
+    <title>JUDGE</title>
+</head>
+<body>
+<!-- Simple header with scrollable tabs. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button">
+<header class="mdl-layout__header">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title mdl-cell--hide-phone">JUDGE</span>
+<div class="mdl-layout-spacer"></div>
+            <!--navigation bar-->
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href=""><i class="material-icons">account_circle</i> <%-jresult.name%> </a>
+                <a class="mdl-navigation__link" href="/login"><i class="material-icons">power_settings_new</i> Sign out </a>
+            </nav>
+        </div>
+        <!-- Tabs -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-layout--large-screen-only">
+<a href="../C1" class="mdl-layout__tab">The Hubble Telescope Nebula Challenge</a>
+            <a href="../C2" class="mdl-layout__tab">The Canyons of Mars</a>
+            <a href="../C3" class="mdl-layout__tab">Blast Off: the Straight-ish Line Speed Test</a>
+            <a href="#scroll-tab-4" class="mdl-layout__tab  is-active">Pi Noon: The Right Stuff</a>
+            <a href="../C5" class="mdl-layout__tab">Space Invaders</a>
+            <a href="../C6" class="mdl-layout__tab">Spirit of Curiosity</a>
+            <a href="../C7" class="mdl-layout__tab">The Apollo 13 Obstacle Course</a>
+            <%if(jresult.permission==2){%>
+            <a href="../C8" class="mdl-layout__tab">Technical Marking</a>
+            <%}%>
+        </div>
+
+    </header>
+    <!--drawer-->
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout__title">JUDGE</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="../C1">The Hubble Telescope Nebula Challenge</a>
+            <a class="mdl-navigation__link" href="../C2">The Canyons of Mars</a>
+            <a class="mdl-navigation__link" href="../C3">Blast Off: the Straight-ish Line Speed Test</a>
+            <a class="mdl-navigation__link" href="../C4">Pi Noon: The Right Stuff</a>
+            <a class="mdl-navigation__link" href="../C5">Space Invaders</a>
+            <a class="mdl-navigation__link" href="../C6">Spirit of Curiosity</a>
+            <a class="mdl-navigation__link" href="../C7">The Apollo 13 Obstacle Course</a>
+            <%if(jresult.permission==2){%>
+            <a class="mdl-navigation__link" href="../C8">Technical Marking</a>
+            <%}%>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel is-active" id="scroll-tab-4">
+            <form method="post" href="/c4">
+                <input type="hidden" name="name" value="Pi Noon: The Right Stuff">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div class="page-content">
+                        <!-- Your content goes here -->
+                        <div class="mdl-grid">
+                            <div class="mdl-layout-spacer"></div>
+                            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                                <div class="mdl-card__title">
+                                    <h1 class="mdl-card__title-text">Team Selection</h1>
+                                </div>
+                                <div class="mdl-card__supporting-text scrollable">
+                                    <table style="width: 100%;">
+                                        <tr>
+                                            <td style="width: 50%">
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 80px">
+                                                    <select class="mdl-textfield__input" id="teamRed" name="teamRed" style="width: 100px">
+                                                        <%for(var i=0;i<tresult.length;i++){%>
+                                                        <option value=<%-tresult[i].name%>><%-tresult[i].name%></option>
+                                                        <%}%>
+                                                    </select>
+                                                    <label class="mdl-textfield__label" for="teamRed">Team Red</label>
+                                                </div>
+                                            </td>
+                                            <td style="width: 33%">
+                                                VS
+                                            </td>
+                                            <td style="width: 33%">
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 80px">
+                                                    <select class="mdl-textfield__input" id="teamBlue" name="teamBlue" style="width: 100px">
+                                                        <%for(var i=0;i<tresult.length;i++){%>
+                                                        <option value=<%-tresult[i].name%>><%-tresult[i].name%></option>
+                                                        <%}%>
+                                                    </select>
+                                                    <label class="mdl-textfield__label" for="teamBlue">Team Blue</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="mdl-layout-spacer"></div>
+                        </div>
+                        <div class="mdl-grid">
+                            <div class="mdl-layout-spacer"></div>
+                            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col">
+                                <div class="mdl-card__title">
+                                    <h1 class="mdl-card__title-text">Winning team:</h1>
+                                </div>
+                                <div class="mdl-card__supporting-text scrollable" >
+                                    <table style="width: 100%">
+                                        <tr>
+                                            <td>
+                                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="additional1Option1">
+                                                    <input type="radio" id="additional1Option1" class="mdl-radio__button" name="additional" value="red">
+                                                    <span class="mdl-radio__label">Red</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="additional1Option2">
+                                                    <input type="radio" id="additional1Option2" class="mdl-radio__button" name="additional" value="blue">
+                                                    <span class="mdl-radio__label">Blue</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="mdl-layout-spacer"></div>
+                        </div>
+                        <div class="mdl-grid">
+                            <div class="mdl-layout-spacer"></div>
+                            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--4-col"   >
+                                <div class="mdl-card__title">
+                                    <h1 class="mdl-card__title-text">Bye or No show?</h1>
+                                </div>
+                                <div class="mdl-card__supporting-text scrollable ">
+                                    <table style="width: 100%">
+                                        <tr>
+                                            <td>
+                                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="points1Option1">
+                                                    <input type="radio" id="points1Option1" class="mdl-radio__button" name="points" value="40">
+                                                    <span class="mdl-radio__label">YES</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="points1Option2">
+                                                    <input type="radio" id="points1Option2" class="mdl-radio__button" name="points" value="50">
+                                                    <span class="mdl-radio__label">NO</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <br>
+                                                <br>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="mdl-layout-spacer"></div>
+                        </div>
+                        <div class="mdl-grid">
+                            <div class="mdl-layout-spacer"></div>
+                            <div class="mdl-cell mdl-cell&#45;&#45;12-col send-button" align="center">
+                                <!-- Accent-colored raised button with ripple -->
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="width: 140px; min-width: initial" type="submit">
+                                    submit
+                                </button>
+                            </div>
+                            <div class="mdl-layout-spacer"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+            <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer__left-section">
+                <div class="mdl-logo"><a href="/privacy">Privacy & Terms</a></div>
+</div>
+        </footer>
+    </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>admin</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<form id="challenge form" method="post" action="">
+    <table id="timetable">
+    <tr>
+        <th>Competition</th>
+        <th>Date</th>
+        <th>Start</th>
+        <th>End</th>
+    </tr>
+    <%for(var i=0;i<7;i++){%>
+        <tr>
+            <td><%-result.name[i]%></td>
+            <td><input type="date" name="date" value=<%-result.date[i]%>></td>
+            <td><input type="time" name="start" value=<%-result.start[i]%>></td>
+            <td><input type="time" name="end" value=<%-result.end[i]%>></td>
+        </tr>
+    <%}%>
+    </table>
+    <button>Confirm</button>
+</form>
+<script type="text/javascript" src="/jquery/dist/jquery.js"></script>
+<script>
+    $('#challenge form').on('submit',function (e) {
+        e.preventDefault();
+        $.ajax({
+            url:'/administor',
+            type:'post',
+            data:$(this).serialize(),
+            dataType:'json',
+            success:function (data) {
+                var err=data.err;
+                if(err===0){
+                    window.alert('successfully changed!');
+                }else{
+                    window.alert('Change failed!');
+                }
+            }
+        })
+    })
+</script>
+
+</body>
+</html>

@@ -9,7 +9,7 @@
 * Results go missing!
 
 ## Solutions
-* A web application to handle the management if results for Pi Wars Robotics competition
+* A web application to handle the management of results for Pi Wars Robotics competition
 
 ## Development Process
 - Essentially an agile approach

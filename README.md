@@ -1,6 +1,6 @@
 # Pi Wars
 * Pi Wars is a robotics competition, in which teams must build and deploy a Raspberry Pi based robot to compete a series of challenges.
-[piwars.org](https://piwars.org/))
+[piwars.org](https://piwars.org/)
 * There are two days of competitions, with schools and other kids’ clubs competing on the first day, and general competition, divided into three categories (beginners, intermediates, and advanced/professionals) on the second day
 * Challenges are staffed by volunteers, in shifts, each of whom recordsresults, which in turn get relayed back to a central collection point, and overall scores are calculated
 

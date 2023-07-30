@@ -1,3 +1,5 @@
+![image](https://github.com/CuteCodevx/team_4_project/assets/23330497/85c8cc23-88a3-4503-a008-b1d12ebdd8c0)
+
 # Pi Wars
 * Pi Wars is a robotics competition, in which teams must build and deploy a Raspberry Pi based robot to compete a series of challenges.
 [piwars.org](https://piwars.org/)
